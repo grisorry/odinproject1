@@ -4,4 +4,9 @@ block content
   h1= title
   p Welcome to #{title}
 
+  h1 = 'Posts'
+  each post in posts
+   p
+    a(href="/post/" + post.id) #{post.name}
+    span= ' - ' + post.message
   a(href="/new") New Post
