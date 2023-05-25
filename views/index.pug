@@ -5,7 +5,8 @@ block content
   p Welcome to #{title}
   each post in messages
     p
-      a(href="/post/" + post.added) #{post.name}
+      p #{post.added}
+      p #{post.user}
       span= ' - ' + post.text
 
   a(href="/new") New Post
