@@ -3,10 +3,9 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  each post in messages
+    p
+      a(href="/post/" + post.added) #{post.name}
+      span= ' - ' + post.text
 
-  h1 = 'Posts'
-  each post in posts
-   p
-    a(href="/post/" + post.id) #{post.name}
-    span= ' - ' + post.message
   a(href="/new") New Post
